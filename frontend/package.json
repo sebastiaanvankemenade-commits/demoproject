@@ -1,0 +1,29 @@
+{
+  "name": "assemblyvision-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "lucide-react": "1.8.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.2.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.2.0",
+    "tailwindcss": "4.2.2",
+    "typescript": "5.9.3",
+    "vite": "7.3.2"
+  },
+  "overrides": {
+    "rollup": "4.62.2",
+    "esbuild": "0.27.7",
+    "jiti": "2.6.1"
+  }
+}
