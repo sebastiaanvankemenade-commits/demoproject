@@ -19,6 +19,7 @@ BOLT_ASSEMBLY = Workflow(
             instruction="Plaats de sluitring om de verwijderde bout.",
             completion_criterion="The washer is visibly positioned around the bolt.",
             expected_objects=["bolt", "washer"],
+            deviation_conditions=["verkeerd onderdeel om de bout geplaatst"],
         ),
         WorkflowStep(
             id="mount-bolt",
@@ -26,6 +27,7 @@ BOLT_ASSEMBLY = Workflow(
             instruction="Plaats de bout terug in de montageplaat en bevestig de vleugelmoer.",
             completion_criterion="The bolt is visibly reinserted in the plate and the wing nut is visibly installed.",
             expected_objects=["bolt", "mounting plate", "wing nut"],
+            deviation_conditions=["bout teruggeplaatst zonder sluitring"],
         ),
     ],
 )
@@ -40,6 +42,7 @@ OBJECT_PLACEMENT = Workflow(
             instruction="Plaats het rode onderdeel op positie A.",
             completion_criterion="A red component lies inside the marked position labelled A.",
             expected_objects=["red component", "position A"],
+            deviation_conditions=["rood onderdeel op verkeerde positie", "verkeerd onderdeel op positie A"],
             requires_transition=True,
         ),
         WorkflowStep(
@@ -48,6 +51,7 @@ OBJECT_PLACEMENT = Workflow(
             instruction="Plaats het blauwe onderdeel op positie B.",
             completion_criterion="A blue component lies inside the marked position labelled B.",
             expected_objects=["blue component", "position B"],
+            deviation_conditions=["blauw onderdeel op verkeerde positie", "verkeerd onderdeel op positie B"],
             requires_transition=True,
         ),
         WorkflowStep(
@@ -56,9 +60,26 @@ OBJECT_PLACEMENT = Workflow(
             instruction="Plaats het groene onderdeel op positie C.",
             completion_criterion="A green component lies inside the marked position labelled C.",
             expected_objects=["green component", "position C"],
+            deviation_conditions=["groen onderdeel op verkeerde positie", "verkeerd onderdeel op positie C"],
             requires_transition=True,
         ),
     ],
 )
 
-DEFAULT_WORKFLOWS = [OBJECT_PLACEMENT, BOLT_ASSEMBLY]
+SCREW_TIGHTENING = Workflow(
+    id="screw-tightening",
+    name="Montagecontrole — Schroef aandraaien",
+    steps=[
+        WorkflowStep(
+            id="tighten-screw",
+            title="Draai de schroef aan",
+            instruction="Draai de schroef vast in de montageplaat.",
+            completion_criterion="The screw is visibly seated in the mounting plate and no hand is touching it.",
+            expected_objects=["screw", "mounting plate"],
+            requires_transition=True,
+            expected_turns=6,
+        ),
+    ],
+)
+
+DEFAULT_WORKFLOWS = [OBJECT_PLACEMENT, BOLT_ASSEMBLY, SCREW_TIGHTENING]

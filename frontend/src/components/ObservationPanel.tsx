@@ -28,8 +28,9 @@ function Entry({ entry }: { entry: ObservationEntry }) {
   return (
     <article className="border-b border-line/60 px-3 py-2 text-[13px] last:border-0">
       <div className="mb-1 text-[12px] text-muted tabular-nums">
-        {entry.time} · {cameras}
-        {!entry.model && " · beeldcontrole"}
+        {entry.time}
+        {entry.simulated ? " · simulatie" : ` · ${cameras}`}
+        {!entry.model && !entry.simulated && " · beeldcontrole"}
       </div>
       {seen && <Row label="Gezien">{seen}</Row>}
       <Row label="Model">

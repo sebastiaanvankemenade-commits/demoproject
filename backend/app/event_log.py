@@ -41,6 +41,10 @@ def describe(event: EngineEvent, workflow: Workflow) -> str:
         case EventType.STEP_CONFIRMED:
             how = "handmatig bevestigd" if event.detail == "manual" else "visueel bevestigd"
             return f"{step} {how}."
+        case EventType.TURNS_RECORDED:
+            counted, expected = event.detail.split("/")
+            short = " Minder dan verwacht." if int(counted) < int(expected) else ""
+            return f"{step}: {counted} van {expected} draaibewegingen geteld.{short}"
         case EventType.COMPLETION_REJECTED:
             return f"{step}: voltooiing afgewezen door operator."
         case EventType.STEP_RESET:
@@ -63,4 +67,12 @@ class EventLog:
         now = datetime.now()
         self.recent.appendleft({"time": now.strftime("%H:%M:%S"), "text": text})
         self._db.execute("INSERT INTO events VALUES (?, ?)", (now.isoformat(), text))
+        self._db.commit()
+
+    def rows(self) -> list[tuple[str, str]]:
+        return self._db.execute("SELECT at, text FROM events ORDER BY rowid").fetchall()
+
+    def clear(self) -> None:
+        self.recent.clear()
+        self._db.execute("DELETE FROM events")
         self._db.commit()

@@ -1,0 +1,12 @@
+{"rule": "oud", "scene": "1_leeg", "step": "place-red", "expected": false, "reported": 2, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "oud", "scene": "2_rood_op_a", "step": "place-blue", "expected": false, "reported": 5, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "oud", "scene": "4_blauw_op_b", "step": "place-green", "expected": false, "reported": 5, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "oud", "scene": "3_blauw_verkeerd_op_c", "step": "place-blue", "expected": true, "reported": 5, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "oud", "scene": "red_in_B", "step": "place-red", "expected": true, "reported": 5, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "oud", "scene": "blue_in_A", "step": "place-red", "expected": true, "reported": 0, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "nieuw", "scene": "1_leeg", "step": "place-red", "expected": false, "reported": 0, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "nieuw", "scene": "2_rood_op_a", "step": "place-blue", "expected": false, "reported": 0, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "nieuw", "scene": "4_blauw_op_b", "step": "place-green", "expected": false, "reported": 0, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "nieuw", "scene": "3_blauw_verkeerd_op_c", "step": "place-blue", "expected": true, "reported": 5, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "nieuw", "scene": "red_in_B", "step": "place-red", "expected": true, "reported": 5, "n": 5, "invalid": 0, "completed": 0}
+{"rule": "nieuw", "scene": "blue_in_A", "step": "place-red", "expected": true, "reported": 0, "n": 5, "invalid": 0, "completed": 0}

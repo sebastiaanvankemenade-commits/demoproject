@@ -79,6 +79,37 @@ def test_thinking_is_only_disabled_for_models_that_support_it():
     assert bodies[1]["think"] is False
 
 
+def test_deviation_reaches_the_observation_only_on_a_clear_incomplete():
+    step = STEP.model_copy(update={"deviation_conditions": ["fout"]})
+    bodies = []
+
+    def answer(status: str):
+        def handler(request: httpx.Request) -> httpx.Response:
+            bodies.append(json.loads(request.content))
+            content = json.dumps(ANSWER | {"status": status, "deviation": "fout"})
+            return httpx.Response(200, json={"message": {"content": content}, "done_reason": "stop"})
+
+        return handler
+
+    obs = asyncio.run(service(answer("incomplete")).observe(VISION, WORKFLOW, step, [frame()]))
+    assert obs.deviation == "fout"
+    assert "Known deviations: fout" in bodies[0]["messages"][1]["content"]
+    obs = asyncio.run(service(answer("uncertain")).observe(VISION, WORKFLOW, step, [frame()]))
+    assert obs.deviation is None
+
+
+def test_step_without_deviations_sends_no_deviation_instruction():
+    bodies = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        bodies.append(json.loads(request.content))
+        return httpx.Response(200, json={"message": {"content": json.dumps(ANSWER)}, "done_reason": "stop"})
+
+    asyncio.run(service(handler).observe(VISION, WORKFLOW, STEP, [frame()]))
+    assert "deviation" not in bodies[0]["format"]["properties"]
+    assert "deviation" not in bodies[0]["messages"][1]["content"].lower()
+
+
 def test_model_list_reports_only_what_ollama_says():
     def handler(request: httpx.Request) -> httpx.Response:
         return httpx.Response(200, json={"models": [{"name": "a:1", "capabilities": ["vision"]}, {"name": "b:1"}]})

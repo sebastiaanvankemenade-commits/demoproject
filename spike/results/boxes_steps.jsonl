@@ -1,0 +1,84 @@
+{"variant": "huidig", "step": "place-red", "scene": "1_leeg", "view": "top", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "huidig", "step": "place-red", "scene": "1_leeg", "view": "top", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "huidig", "step": "place-red", "scene": "1_leeg", "view": "side", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "huidig", "step": "place-red", "scene": "1_leeg", "view": "side", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "huidig", "step": "place-red", "scene": "2_rood_op_a", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component, positie A"]}
+{"variant": "huidig", "step": "place-red", "scene": "2_rood_op_a", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component, positie A"]}
+{"variant": "huidig", "step": "place-red", "scene": "2_rood_op_a", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component, positie A"]}
+{"variant": "huidig", "step": "place-red", "scene": "2_rood_op_a", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component, positie A"]}
+{"variant": "huidig", "step": "place-red", "scene": "red_in_B", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 1, "labels": ["rode component", "positie A"]}
+{"variant": "huidig", "step": "place-red", "scene": "red_in_B", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 1, "labels": ["rode component", "positie A"]}
+{"variant": "huidig", "step": "place-red", "scene": "red_in_B", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 1, "labels": ["rode component", "positie A"]}
+{"variant": "huidig", "step": "place-red", "scene": "red_in_B", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 1, "labels": ["rode component", "positie A"]}
+{"variant": "huidig", "step": "place-blue", "scene": "2_rood_op_a", "view": "top", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "huidig", "step": "place-blue", "scene": "2_rood_op_a", "view": "top", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "huidig", "step": "place-blue", "scene": "2_rood_op_a", "view": "side", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 1, "labels": ["position B"]}
+{"variant": "huidig", "step": "place-blue", "scene": "2_rood_op_a", "view": "side", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 1, "labels": ["position B"]}
+{"variant": "huidig", "step": "place-blue", "scene": "4_blauw_op_b", "view": "top", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 1, "labels": ["blauwe component", "positie B"]}
+{"variant": "huidig", "step": "place-blue", "scene": "4_blauw_op_b", "view": "top", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 1, "labels": ["blauwe component", "positie B"]}
+{"variant": "huidig", "step": "place-blue", "scene": "4_blauw_op_b", "view": "side", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 1, "labels": ["blauwe component", "positie B"]}
+{"variant": "huidig", "step": "place-blue", "scene": "4_blauw_op_b", "view": "side", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 1, "labels": ["blauwe component", "positie B"]}
+{"variant": "huidig", "step": "place-green", "scene": "4_blauw_op_b", "view": "top", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "huidig", "step": "place-green", "scene": "4_blauw_op_b", "view": "top", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "huidig", "step": "place-green", "scene": "4_blauw_op_b", "view": "side", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "huidig", "step": "place-green", "scene": "4_blauw_op_b", "view": "side", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "huidig", "step": "place-green", "scene": "5_alles_geplaatst", "view": "top", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["groene component"]}
+{"variant": "huidig", "step": "place-green", "scene": "5_alles_geplaatst", "view": "top", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["groene component, positie C"]}
+{"variant": "huidig", "step": "place-green", "scene": "5_alles_geplaatst", "view": "side", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["groene component, positie C"]}
+{"variant": "huidig", "step": "place-green", "scene": "5_alles_geplaatst", "view": "side", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["groene component, positie C"]}
+{"variant": "zonder-positie", "step": "place-red", "scene": "1_leeg", "view": "top", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-red", "scene": "1_leeg", "view": "top", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-red", "scene": "1_leeg", "view": "side", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-red", "scene": "1_leeg", "view": "side", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-red", "scene": "2_rood_op_a", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component"]}
+{"variant": "zonder-positie", "step": "place-red", "scene": "2_rood_op_a", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component"]}
+{"variant": "zonder-positie", "step": "place-red", "scene": "2_rood_op_a", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component"]}
+{"variant": "zonder-positie", "step": "place-red", "scene": "2_rood_op_a", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component"]}
+{"variant": "zonder-positie", "step": "place-red", "scene": "red_in_B", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component"]}
+{"variant": "zonder-positie", "step": "place-red", "scene": "red_in_B", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component"]}
+{"variant": "zonder-positie", "step": "place-red", "scene": "red_in_B", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component"]}
+{"variant": "zonder-positie", "step": "place-red", "scene": "red_in_B", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["rode component"]}
+{"variant": "zonder-positie", "step": "place-blue", "scene": "2_rood_op_a", "view": "top", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-blue", "scene": "2_rood_op_a", "view": "top", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-blue", "scene": "2_rood_op_a", "view": "side", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-blue", "scene": "2_rood_op_a", "view": "side", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-blue", "scene": "4_blauw_op_b", "view": "top", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["blauwe component"]}
+{"variant": "zonder-positie", "step": "place-blue", "scene": "4_blauw_op_b", "view": "top", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["blauwe component"]}
+{"variant": "zonder-positie", "step": "place-blue", "scene": "4_blauw_op_b", "view": "side", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["blauwe component"]}
+{"variant": "zonder-positie", "step": "place-blue", "scene": "4_blauw_op_b", "view": "side", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["blauwe component"]}
+{"variant": "zonder-positie", "step": "place-green", "scene": "4_blauw_op_b", "view": "top", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-green", "scene": "4_blauw_op_b", "view": "top", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-green", "scene": "4_blauw_op_b", "view": "side", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-green", "scene": "4_blauw_op_b", "view": "side", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie", "step": "place-green", "scene": "5_alles_geplaatst", "view": "top", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["groene component"]}
+{"variant": "zonder-positie", "step": "place-green", "scene": "5_alles_geplaatst", "view": "top", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["groene component"]}
+{"variant": "zonder-positie", "step": "place-green", "scene": "5_alles_geplaatst", "view": "side", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["groene component"]}
+{"variant": "zonder-positie", "step": "place-green", "scene": "5_alles_geplaatst", "view": "side", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["groene component"]}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "1_leeg", "view": "top", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "1_leeg", "view": "top", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "1_leeg", "view": "side", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "1_leeg", "view": "side", "wanted": "red", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "2_rood_op_a", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["red component"]}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "2_rood_op_a", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["red component"]}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "2_rood_op_a", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["red component"]}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "2_rood_op_a", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["red component"]}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "red_in_B", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["red component"]}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "red_in_B", "view": "top", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["red component"]}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "red_in_B", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["red component"]}
+{"variant": "zonder-positie-engels", "step": "place-red", "scene": "red_in_B", "view": "side", "wanted": "red", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["red component"]}
+{"variant": "zonder-positie-engels", "step": "place-blue", "scene": "2_rood_op_a", "view": "top", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-blue", "scene": "2_rood_op_a", "view": "top", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-blue", "scene": "2_rood_op_a", "view": "side", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-blue", "scene": "2_rood_op_a", "view": "side", "wanted": "blue", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-blue", "scene": "4_blauw_op_b", "view": "top", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["blue component"]}
+{"variant": "zonder-positie-engels", "step": "place-blue", "scene": "4_blauw_op_b", "view": "top", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["blue component"]}
+{"variant": "zonder-positie-engels", "step": "place-blue", "scene": "4_blauw_op_b", "view": "side", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["blue component"]}
+{"variant": "zonder-positie-engels", "step": "place-blue", "scene": "4_blauw_op_b", "view": "side", "wanted": "blue", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["blue component"]}
+{"variant": "zonder-positie-engels", "step": "place-green", "scene": "4_blauw_op_b", "view": "top", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-green", "scene": "4_blauw_op_b", "view": "top", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-green", "scene": "4_blauw_op_b", "view": "side", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-green", "scene": "4_blauw_op_b", "view": "side", "wanted": "green", "present": false, "right": 0, "wrong": 0, "neutral": 0, "labels": []}
+{"variant": "zonder-positie-engels", "step": "place-green", "scene": "5_alles_geplaatst", "view": "top", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["green component"]}
+{"variant": "zonder-positie-engels", "step": "place-green", "scene": "5_alles_geplaatst", "view": "top", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["green component"]}
+{"variant": "zonder-positie-engels", "step": "place-green", "scene": "5_alles_geplaatst", "view": "side", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["green component"]}
+{"variant": "zonder-positie-engels", "step": "place-green", "scene": "5_alles_geplaatst", "view": "side", "wanted": "green", "present": true, "right": 1, "wrong": 0, "neutral": 0, "labels": ["green component"]}

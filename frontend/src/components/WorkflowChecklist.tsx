@@ -11,6 +11,12 @@ const STATES: Record<StepState, { label: string; colour: string }> = {
   deviation: { label: "Afwijking gedetecteerd", colour: "text-fault" },
 };
 
+const CONFIRMED = {
+  ai: "Visueel bevestigd",
+  manual: "Handmatig bevestigd",
+  simulated: "Gesimuleerd bevestigd",
+};
+
 export default function WorkflowChecklist({ state }: { state: AppState }) {
   const active = state.workflow.steps.find((step) => step.state !== "completed" && step.state !== "waiting");
 
@@ -28,7 +34,7 @@ export default function WorkflowChecklist({ state }: { state: AppState }) {
 
       <ol className="min-h-0 flex-1 overflow-auto p-2">
         {state.workflow.steps.map((step) => (
-          <StepRow key={step.id} step={step} />
+          <StepRow key={step.id} step={step} hasCountArea={state.cameras.some((camera) => camera.count_area)} />
         ))}
       </ol>
 
@@ -50,7 +56,7 @@ export default function WorkflowChecklist({ state }: { state: AppState }) {
   );
 }
 
-function StepRow({ step }: { step: Step }) {
+function StepRow({ step, hasCountArea }: { step: Step; hasCountArea: boolean }) {
   const state = STATES[step.state];
   const current = step.state !== "waiting" && step.state !== "completed";
 
@@ -65,6 +71,16 @@ function StepRow({ step }: { step: Step }) {
           <span className={`shrink-0 text-[12px] ${state.colour}`}>{state.label}</span>
         </div>
         <p className="mt-0.5 text-[13px] leading-snug text-muted">{step.instruction}</p>
+        {step.expected_turns !== null && step.state !== "waiting" && (
+          <p className="mt-1 text-[12px] tabular-nums">
+            <span className={step.state === "completed" && step.turns < step.expected_turns ? "text-doubt" : "text-ink"}>
+              {step.turns} van {step.expected_turns} draaibewegingen geteld
+            </span>
+            {current && !hasCountArea && (
+              <span className="block text-doubt">Teken een telgebied op een camera om te tellen.</span>
+            )}
+          </p>
+        )}
         {step.state === "verifying" && (
           <p className="mt-1 text-[12px] text-doubt tabular-nums">
             Bevestiging {step.confirmations} van {step.required}
@@ -72,7 +88,7 @@ function StepRow({ step }: { step: Step }) {
         )}
         {step.confirmed_at && (
           <p className="mt-1 text-[12px] text-done tabular-nums">
-            {step.method === "manual" ? "Handmatig bevestigd" : "Visueel bevestigd"} om {step.confirmed_at}
+            {CONFIRMED[step.method ?? "ai"]} om {step.confirmed_at}
           </p>
         )}
         {step.warning && <p className="mt-1 text-[12px] text-fault">{step.warning}</p>}

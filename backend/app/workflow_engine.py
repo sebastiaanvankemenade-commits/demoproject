@@ -37,6 +37,7 @@ class EventType(StrEnum):
     DEVIATION_SUSPECTED = "deviation_suspected"
     DEVIATION_CONFIRMED = "deviation_confirmed"
     STEP_CONFIRMED = "step_confirmed"
+    TURNS_RECORDED = "turns_recorded"
     COMPLETION_REJECTED = "completion_rejected"
     STEP_RESET = "step_reset"
     COUNTERS_RESET = "counters_reset"
@@ -67,6 +68,7 @@ class StepRecord(BaseModel):
     seen_incomplete: bool = False
     deviation_count: int = 0
     deviation: str | None = None
+    turns: int = 0
     method: ConfirmationMethod | None = None
     confirmed_at: datetime | None = None
     evidence: list[Observation] = Field(default_factory=list)
@@ -200,11 +202,21 @@ class WorkflowEngine:
         record.confirmations = 0
         record.evidence = []
 
+    def add_turns(self, turns: int) -> None:
+        """Counted movements are recorded with the step but never decide it."""
+        if self.running and self.active_record is not None:
+            self.active_record.turns += turns
+
     def _confirm(self, record: StepRecord, method: ConfirmationMethod) -> list[EngineEvent]:
+        expected = self.active_step.expected_turns
         record.state = StepState.COMPLETED
         record.method = method
         record.confirmed_at = datetime.now(timezone.utc)
         events = [EngineEvent(type=EventType.STEP_CONFIRMED, step_id=record.step_id, detail=method.value)]
+        if expected is not None:
+            events.append(
+                EngineEvent(type=EventType.TURNS_RECORDED, step_id=record.step_id, detail=f"{record.turns}/{expected}")
+            )
         if self.finished:
             self.running = False
             events.append(EngineEvent(type=EventType.WORKFLOW_COMPLETED))
@@ -225,6 +237,7 @@ class WorkflowEngine:
         if not self.running or record is None:
             return []
         self._reset_record(record)
+        record.turns = 0
         return [EngineEvent(type=EventType.COMPLETION_REJECTED, step_id=record.step_id)]
 
     def reset_active_step(self) -> list[EngineEvent]:
@@ -232,6 +245,7 @@ class WorkflowEngine:
         if not self.running or record is None:
             return []
         self._reset_record(record)
+        record.turns = 0
         return [EngineEvent(type=EventType.STEP_RESET, step_id=record.step_id)]
 
     def reset_counters(self) -> list[EngineEvent]:

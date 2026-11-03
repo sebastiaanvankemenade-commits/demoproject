@@ -59,6 +59,15 @@ class OllamaClient:
             capabilities=entry.get("capabilities") or [],
         )
 
+    async def loaded_memory_mb(self) -> float | None:
+        """Memory held by models Ollama has loaded, or None when that cannot be observed."""
+        try:
+            response = await self._http.get("/api/ps", timeout=5)
+            response.raise_for_status()
+        except httpx.HTTPError:
+            return None
+        return round(sum(entry.get("size", 0) for entry in response.json().get("models", [])) / 1e6, 1)
+
     async def chat(self, body: dict, timeout_s: float) -> ChatResult:
         try:
             response = await self._http.post("/api/chat", json=body | {"stream": False}, timeout=timeout_s)

@@ -172,3 +172,6 @@ class MacCameraCapture:
         if self._session is not None:
             self._session.stopRunning()
             self._session = None
+
+
+Capture = MacCameraCapture

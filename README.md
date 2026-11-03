@@ -23,7 +23,9 @@ Op een netwerk dat `registry.npmjs.org` blokkeert, installeer je de frontend van
 | Camera's op serienummer (macOS) | Gebouwd, getest met twee Facecams. Poortwissel en loskoppelen niet getest |
 | Dashboard met live beeld, checklist, observaties, log | Gebouwd, in de browser gecontroleerd. Knoppen nog niet doorgeklikt |
 | Workflows A en B | Aanwezig, nog nooit op echte onderdelen getest |
-| Werkinstructie-editor, AI Playground, Prestaties, Benchmark, Instellingen, Simulatie | Nog niet gebouwd |
+| Werkinstructie-editor, AI Playground, Prestaties, Instellingen, Simulatie | Gebouwd, getest zonder echte camera's |
+| Vakken van het model, draaibewegingen tellen | Gebouwd, getest op gegenereerde beelden |
+| Benchmark | Nog niet gebouwd |
 | Linux/Windows-cameralaag | Nog niet gebouwd |
 
 ## Bekende beperkingen
